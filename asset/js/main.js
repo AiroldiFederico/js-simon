@@ -131,6 +131,19 @@ setTimeout ( function(){
         } else {
             document.getElementById('risultato').innerHTML = '<h2 class="perso">Hai perso</h2>';
             console.log('Hai perso.');
+
+            for (let f = 0; f < numeriArray.length; f++) {
+                for (let h = 0; h < nuemriInput.length; h++) {
+                    if (numeriArray[f] === nuemriInput[h]) {
+                        document.getElementById('numerindovinati-text').innerHTML = `<h4>Numeri indovinati:</h4>`;
+                        document.getElementById('numerindovinati').innerHTML += `<h4 class="d-inline-block"> ${numeriArray[f]} </h4>` + " ";
+                        document.getElementById('numeridaindovinare-text').innerHTML = `<h4>Numeri da indovinare:</h4>`;
+                        document.getElementById('numeridaindovinare').innerHTML = `<h4>${numeriArray}</h4>`;
+                    }
+                }
+            }
+
+
         }
     }, 26000);
 
