@@ -27,7 +27,7 @@ while ( numeriArray.length < 5 ){
 
     let random = randomNumber();
 
-    if ( !numeriArray.includes(randomNumber)) {
+    if ( !numeriArray.includes(random)) {
 
         numeriArray.push(random);
     };
