@@ -17,3 +17,18 @@ body {
 }
 
 
+#ul {
+    color: var(--color-4);
+    display: flex;
+    padding: 0px;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 2rem;
+    font-size: larger;
+}
+
+h1 {
+    color: var(--color-4);
+}

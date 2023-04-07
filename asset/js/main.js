@@ -10,6 +10,8 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
 1- genero 5 numeri casuali
 
+2- stampaimo i numeri in pagina
+
 */
 
 //numeri casuali
@@ -35,3 +37,9 @@ while ( numeriArray.length < 5 ){
 };
 
 console.log(numeriArray);
+
+//stampiamo i nuemri in pagina
+
+for ( let i = 0; i < numeriArray.length; i++ ) {
+    document.getElementById('ul').innerHTML += `<li>${numeriArray[i]}</li>`
+}
