@@ -87,11 +87,11 @@ setTimeout ( function(){
     // console.log(in4);
     // console.log(in5);
 
-    nuemriInput[0] = in1;
-    nuemriInput[1] = in2;
-    nuemriInput[2] = in3;
-    nuemriInput[3] = in4;
-    nuemriInput[4] = in5;
+    nuemriInput[0] = parseInt(in1);
+    nuemriInput[1] = parseInt(in2);
+    nuemriInput[2] = parseInt(in3);
+    nuemriInput[3] = parseInt(in4);
+    nuemriInput[4] = parseInt(in5);
 
     console.log(nuemriInput);
 }, 25000)
