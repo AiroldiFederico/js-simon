@@ -14,6 +14,8 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
 3- far scomparire i numeri dopo tot secondi
 
+4- l'utente inserisce i numeri
+
 */
 
 //numeri casuali
@@ -41,7 +43,6 @@ while ( numeriArray.length < 5 ){
 console.log(numeriArray);
 
 //stampiamo i nuemri in pagina
-
 for ( let i = 0; i < numeriArray.length; i++ ) {
     document.getElementById('ul').innerHTML += `<li>${numeriArray[i]}</li>`
 }
@@ -51,4 +52,12 @@ for ( let i = 0; i < numeriArray.length; i++ ) {
 setTimeout ( function() {
     document.getElementById('ul').innerHTML = ``
 }, 2500)
+
+setTimeout ( function() {
+    for ( let k = 0; k < 5; k++ ) {
+    document.getElementById('ul2').innerHTML += `<li><input type="number" class="form-control" id="input${k}"></li>`
+    }
+}, 2500)
+
+let nuemriInput = [];
 
