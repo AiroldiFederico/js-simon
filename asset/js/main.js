@@ -16,6 +16,10 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
 4- l'utente inserisce i numeri
 
+5- i numeri inseriti vanno nell'array
+
+6- confronto dei due array
+
 */
 
 //numeri casuali
@@ -90,9 +94,26 @@ setTimeout ( function(){
     nuemriInput[4] = in5;
 
     console.log(nuemriInput);
-}, 15000)
+}, 25000)
 
 
+//confronto dei numeri generati da quelli inseriti
+let uguali = true;
+setTimeout (function(){
+
+    for (let j = 0; j < numeriArray.length; j++) {
+        if (numeriArray[j] !== nuemriInput[j]) {
+            uguali = false;
+            break;
+        }
+    }
+    
+    if (uguali) {
+        console.log('Hai vinto!');
+    } else {
+        console.log('Hai perso.');
+    }
+}, 26000)
 
 
 
