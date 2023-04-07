@@ -62,9 +62,7 @@ setTimeout ( function() {
     
     for (let k = 1; k < 6; k++ ) {
 
-    document.getElementById('ul2').innerHTML += `<li><input type="number" class="form-control" id="input${k}"></li>`
-
-    console.log(k);
+    document.getElementById('ul2').innerHTML += `<li><input type="number" class="form-control" id="input${k}"></li>`;
 
     };
 
@@ -94,26 +92,54 @@ setTimeout ( function(){
     nuemriInput[4] = parseInt(in5);
 
     console.log(nuemriInput);
+
 }, 25000)
 
 
-//confronto dei numeri generati da quelli inseriti
-let uguali = true;
-setTimeout (function(){
 
-    for (let j = 0; j < numeriArray.length; j++) {
-        if (numeriArray[j] !== nuemriInput[j]) {
-            uguali = false;
-            break;
+//timer countdown
+ setTimeout ( function(){
+
+    //timer
+     let g = 23;
+     let countdown = setInterval(function() {
+         if (g >= 0) {
+             document.getElementById('risultato').innerHTML = `<h2>${g}</h2>`;
+             g--;
+         } else {
+            clearInterval(countdown);
+         }
+     }, 1000);
+
+
+
+
+     //confronto dei numeri generati da quelli inseriti
+    let uguali = true;
+    setTimeout (function(){
+
+        for (let j = 0; j < numeriArray.length; j++) {
+            if (numeriArray[j] !== nuemriInput[j]) {
+                uguali = false;
+                break;
+            }
         }
-    }
+        
+        if (uguali) {
+            document.getElementById('risultato').innerHTML = '<h2>Hai vinto!</h2>';
+            console.log('Hai vinto!');
+        } else {
+            document.getElementById('risultato').innerHTML = '<h2>Hai perso</h2>';
+            console.log('Hai perso.');
+        }
+    }, 26000);
+
+
+ }, 2500);
+
     
-    if (uguali) {
-        console.log('Hai vinto!');
-    } else {
-        console.log('Hai perso.');
-    }
-}, 26000)
+
+
 
 
 
