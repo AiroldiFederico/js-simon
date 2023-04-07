@@ -53,11 +53,50 @@ setTimeout ( function() {
     document.getElementById('ul').innerHTML = ``
 }, 2500)
 
+//inserisco i 5 input
 setTimeout ( function() {
-    for ( let k = 0; k < 5; k++ ) {
+    
+    for (let k = 1; k < 6; k++ ) {
+
     document.getElementById('ul2').innerHTML += `<li><input type="number" class="form-control" id="input${k}"></li>`
-    }
+
+    console.log(k);
+
+    };
+
 }, 2500)
 
+//array dei numeri inseriti
 let nuemriInput = [];
+
+//i numeri inseriti vanno nell'array
+setTimeout ( function(){
+
+    let in1 = document.getElementById('input1').value;
+    let in2 = document.getElementById('input2').value;
+    let in3 = document.getElementById('input3').value;
+    let in4 = document.getElementById('input4').value;
+    let in5 = document.getElementById('input5').value; 
+    // console.log(in1);
+    // console.log(in2);
+    // console.log(in3);
+    // console.log(in4);
+    // console.log(in5);
+
+    nuemriInput[0] = in1;
+    nuemriInput[1] = in2;
+    nuemriInput[2] = in3;
+    nuemriInput[3] = in4;
+    nuemriInput[4] = in5;
+
+    console.log(nuemriInput);
+}, 15000)
+
+
+
+
+
+
+
+
 
