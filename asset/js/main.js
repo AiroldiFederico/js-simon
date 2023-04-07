@@ -126,10 +126,10 @@ setTimeout ( function(){
         }
         
         if (uguali) {
-            document.getElementById('risultato').innerHTML = '<h2>Hai vinto!</h2>';
+            document.getElementById('risultato').innerHTML = '<h2 class="vinto">Hai vinto!</h2>';
             console.log('Hai vinto!');
         } else {
-            document.getElementById('risultato').innerHTML = '<h2>Hai perso</h2>';
+            document.getElementById('risultato').innerHTML = '<h2 class="perso">Hai perso</h2>';
             console.log('Hai perso.');
         }
     }, 26000);
